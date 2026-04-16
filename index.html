@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMDB Movie Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>TMDB Movie Explorer</h1>
+      <p>Click one of the featured posters or search results to open a full-page detail view.</p>
+    </header>
+
+    <section class="featured">
+      <div class="section-header">
+        <h2>Featured Movies</h2>
+        <p>These four titles are loaded for demo browsing.</p>
+      </div>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="controls">
+      <input id="queryInput" type="text" placeholder="Search movie title..." />
+      <button id="searchButton">Search</button>
+    </section>
+
+    <section class="results" id="results"></section>
+  </div>
+
+  <section class="detail-page hidden" id="detailPage">
+    <button class="detail-back" id="detailBack">← Back</button>
+    <h2 class="detail-title" id="detailTitle"></h2>
+    <div class="detail-body" id="detailBody"></div>
+  </section>
+
+  <div class="modal hidden" id="personPopup">
+    <div class="modal-backdrop" id="personPopupBackdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="personPopupClose">×</button>
+      <div id="personPopupContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
